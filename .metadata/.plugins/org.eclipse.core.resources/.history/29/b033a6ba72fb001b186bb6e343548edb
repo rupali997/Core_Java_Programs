@@ -1,0 +1,6 @@
+package com.infy.springbootspringmvccrud.app.model;
+
+@Entity
+public class User {
+
+}

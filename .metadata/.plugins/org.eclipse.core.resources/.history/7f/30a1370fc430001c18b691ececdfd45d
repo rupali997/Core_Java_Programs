@@ -1,0 +1,41 @@
+package com.cjc.app.evf.main.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cjc.app.evf.main.model.EMIDetails;
+import com.cjc.app.evf.main.service.EMIDetailsServiceI;
+
+@RestController
+public class EMIDetailsController {
+	
+	@Autowired
+	EMIDetailsServiceI emis;
+	
+	@PostMapping("/regEMIDetails")
+	public String addData(@RequestBody EMIDetails e)
+	{
+		emis.addData(e);
+		return "EMI Details data Add Successfully !";
+		
+	}
+	
+	@GetMapping("/getEMIDetails/{emiId}")
+	public EMIDetails getdata(@PathVariable int emiId) {
+		return emis.getdataId(emiId);
+
+	}
+	@DeleteMapping("/delete/{emiId}")
+	public String deleteEMIDeails(@PathVariable int emiId)
+	{
+		emis.deleteData(emiId);
+		return "Successfully";
+		
+	}
+
+}

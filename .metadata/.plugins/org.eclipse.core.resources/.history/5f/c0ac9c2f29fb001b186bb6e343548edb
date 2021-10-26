@@ -1,0 +1,16 @@
+management.server.port=9090
+
+spring.mvc.view.suffix=.jsp
+
+#//Connection Properties
+db.driver=com.mysql.jdbc.Driver
+db.url=jdbc:mysql://localhost:3306/springboottask
+db.username=root
+db.password=root
+
+#//HibernateProperties
+hb.dialect=org.hibernate.dialect.MySQLDialect
+hb.hbm2ddl=update
+hb.show_sql=true
+
+hb.packagetoscan=com.infy.springmvc

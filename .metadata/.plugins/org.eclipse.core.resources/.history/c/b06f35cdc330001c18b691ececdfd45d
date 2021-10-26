@@ -1,0 +1,32 @@
+package com.cjc.app.evf.main.service_Implementation;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cjc.app.evf.main.model.LoanDetails;
+import com.cjc.app.evf.main.repository.LoanDetailsRepository;
+
+@Service
+public class LoanDetailsServiceImpl implements LoanDetailsServiceI{
+	
+	@Autowired
+	LoanDetailsRepository ldr;
+
+	@Override
+	public void addData(LoanDetails l) {
+		ldr.save(l);
+	}
+
+	@Override
+	public void deleteData(int lId) {
+		ldr.deleteById(lId);		
+	}
+
+	@Override
+	public LoanDetails getdataId(int lId) {
+		
+		return ldr.findById(lId).get();
+	}
+	
+
+}

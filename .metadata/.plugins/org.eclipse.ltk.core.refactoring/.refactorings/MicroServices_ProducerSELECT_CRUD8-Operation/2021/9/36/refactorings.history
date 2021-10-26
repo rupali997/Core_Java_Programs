@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.example.model&apos; to &apos;MicroServices_Consumer_CRUD8-Operation/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;MicroServices_ProducerSELECT_CRUD8-Operation&apos;&#x0D;&#x0A;- Destination element: &apos;MicroServices_Consumer_CRUD8-Operation/src/main/java&apos;&#x0D;&#x0A;- Original element: &apos;MicroServices_ProducerSELECT_CRUD8-Operation/src/main/java/com.example.model&apos;" description="Copy package" destination="=MicroServices_Consumer_CRUD8-Operation/src\/main\/java" element1="/src\/main\/java&lt;com.example.model" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1630676017954" version="1.0"/>
+</session>

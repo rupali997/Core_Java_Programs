@@ -1,0 +1,5 @@
+
+spring.mvc.view.suffix=.jsp
+spring.mvc.view.prefix=/JSP/
+
+spring.datasource.tomcat.url="jdbc:mysql://localhost:3306/

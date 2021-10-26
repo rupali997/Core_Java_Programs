@@ -1,0 +1,108 @@
+package com.cjc.app.evf.main.model;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+@Entity
+public class CustomerGuaranter {
+
+	@Id
+//	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int gId;
+	private String gName;
+	private String gRealtionWithCustomer;
+	private Long gMobileNo;
+	private String gAadhar;
+	private String gPan;
+	private String gJobDetails;
+	private Long gAlternateNo;
+	
+	@OneToOne(cascade=CascadeType.ALL)
+	private GuaranterAddress gAddress;
+
+	public int getgId() {
+		return gId;
+	}
+
+	public void setgId(int gId) {
+		this.gId = gId;
+	}
+
+	public String getgName() {
+		return gName;
+	}
+
+	public void setgName(String gName) {
+		this.gName = gName;
+	}
+
+	public String getgRealtionWithCustomer() {
+		return gRealtionWithCustomer;
+	}
+
+	public void setgRealtionWithCustomer(String gRealtionWithCustomer) {
+		this.gRealtionWithCustomer = gRealtionWithCustomer;
+	}
+
+	public Long getgMobileNo() {
+		return gMobileNo;
+	}
+
+	public void setgMobileNo(Long gMobileNo) {
+		this.gMobileNo = gMobileNo;
+	}
+
+	public String getgAadhar() {
+		return gAadhar;
+	}
+
+	public void setgAadhar(String gAadhar) {
+		this.gAadhar = gAadhar;
+	}
+
+	public String getgPan() {
+		return gPan;
+	}
+
+	public void setgPan(String gPan) {
+		this.gPan = gPan;
+	}
+
+	public String getgJobDetails() {
+		return gJobDetails;
+	}
+
+	public void setgJobDetails(String gJobDetails) {
+		this.gJobDetails = gJobDetails;
+	}
+
+	public Long getgAlternateNo() {
+		return gAlternateNo;
+	}
+
+	public void setgAlternateNo(Long gAlternateNo) {
+		this.gAlternateNo = gAlternateNo;
+	}
+
+//	@JsonManagedReference
+	@JsonBackReference
+	public GuaranterAddress getgAddress() {
+		return gAddress;
+	}
+
+	public void setgAddress(GuaranterAddress gAddress) {
+		this.gAddress = gAddress;
+	}
+	
+	
+	
+	
+	
+}

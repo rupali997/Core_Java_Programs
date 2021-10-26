@@ -1,0 +1,5 @@
+package com.infy.springbootspringmvccrud.app.dao_Interface;
+
+public interface UserDao {
+
+}

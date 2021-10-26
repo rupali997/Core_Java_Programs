@@ -1,0 +1,30 @@
+package com.cjc.app.evf.main.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class ProfessionDetails {
+
+	
+	@Id
+	private int pId;
+	private String presentEmployer;
+	public int getpId() {
+		return pId;
+	}
+	public void setpId(int pId) {
+		this.pId = pId;
+	}
+	public String getPresentEmployer() {
+		return presentEmployer;
+	}
+	public void setPresentEmployer(String presentEmployer) {
+		this.presentEmployer = presentEmployer;
+	}
+	
+	
+	
+}

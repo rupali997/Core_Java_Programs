@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;AccountDetails.java&apos; to &apos;ElectricVehicle_FinalProject_Backend/src/main/java/com.cjc.app.evf.main.model&apos;&#x0D;&#x0A;- Original project: &apos;EvfProjectTeam1&apos;&#x0D;&#x0A;- Destination element: &apos;ElectricVehicle_FinalProject_Backend/src/main/java/com.cjc.app.evf.main.model&apos;&#x0D;&#x0A;- Original element: &apos;com.cjc.app.evf.main.model.AccountDetails.java&apos;" description="Copy compilation unit" destination="=ElectricVehicle_FinalProject_Backend/src\/main\/java&lt;com.cjc.app.evf.main.model" element1="/src\/main\/java&lt;com.cjc.app.evf.main.model{AccountDetails.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1634647817652" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,43 @@
+package com.cjc.WSSoftDelete.controller;
+
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cjc.WSSoftDelete.model.User;
+
+@RestController
+public class HomeController {
+	
+	@Autowired
+	Repo hs;
+	
+	@PostMapping("/users")
+	public User saveUser(@RequestBody User u) {
+		User user = hs.save(u);
+		return user;
+	}
+	
+	@GetMapping("/users")
+	public List getallUsers() {
+		List<User> list = hs.deleted(false);
+		return list;
+	}
+	
+	@Transactional
+	@PutMapping("/users/{uid}")
+	public String deleteUser(@RequestBody User u,@PathVariable int uid) {
+		hs.deleteUser(true, uid);
+		return "data deleted";
+	}
+	
+}

@@ -1,0 +1,5 @@
+package com.springbootjparestapicrud.app.model;
+
+public class Address {
+
+}

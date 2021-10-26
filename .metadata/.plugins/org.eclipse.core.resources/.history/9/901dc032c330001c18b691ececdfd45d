@@ -1,0 +1,13 @@
+package com.cjc.app.evf.main.service;
+
+import com.cjc.app.evf.main.model.EMIDetails;
+
+public interface EMIDetailsServiceI {
+
+	void addData(EMIDetails e);
+
+	EMIDetails getdataId(int emiId);
+
+	void deleteData(int emiId);
+
+}

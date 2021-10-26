@@ -1,0 +1,11 @@
+package com.infy.springbootspringmvccrud.app.dao_Interface;
+
+import com.infy.springbootspringmvccrud.app.model.User;
+
+public interface UserDao {
+
+	void saveUser(User u);
+
+	User loginCheck(User u);
+
+}

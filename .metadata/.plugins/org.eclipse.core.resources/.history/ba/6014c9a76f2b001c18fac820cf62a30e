@@ -1,0 +1,11 @@
+package com.example.helperclass;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class FileUploadHelperClass {
+	
+	
+	public static String Upload_Img_Dir = "C:\\Users\\Daksha\\Desktop\\SpringBootSTS\\Angular_Backend_Project_for_FileUploading_byCodeWithDurgesh\\src\\main\\resources\\static\\images";
+
+}

@@ -1,0 +1,5 @@
+package com.springbootjparestapicrud.app.service_Interface;
+
+public interface UserService {
+
+}

@@ -1,0 +1,51 @@
+package com.cjc.app.evf.main.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+
+@Entity
+public class Customer_Registration{
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int custId;
+	private String custName;
+	private String custDOB;
+	private String custGender;
+	private String custMaritalStatus;
+	private Long custMobNo;
+	private Long custAlternateNo;
+	private int custCibilScore;
+	private double downpayemnt;
+	private double custEMI;
+	private double Tenure;
+	
+	
+
+	
+	
+	
+	@OneToMany
+	private CustomerGuaranter custGurantor;
+	
+	@OneToOne
+	private ProfessionDetails custProfessionDetails;
+	
+	@OneToOne
+	private BankDetails custBankDetails;
+	
+	@OneToOne
+	private DocumentDetails custDoc;
+	
+	@OneToOne
+	private VehicleDetails vehicleDetails;
+	
+	
+	@OneToMany
+	private Previous_Loan ploan;
+	
+}

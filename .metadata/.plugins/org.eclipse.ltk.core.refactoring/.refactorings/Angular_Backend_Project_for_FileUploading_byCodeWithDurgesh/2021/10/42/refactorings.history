@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 3 elements from project &apos;Angular_Backend_Project_for_FileUploading_byCodeWithDurgesh&apos;&#x0D;&#x0A;- Original project: &apos;Angular_Backend_Project_for_FileUploading_byCodeWithDurgesh&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     resources&#x0D;&#x0A;     static&#x0D;&#x0A;     images" description="Delete elements" element1="src/main/webapp/resources" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="1" stamp="1634061569870" subPackages="false" version="1.0"/>
+</session>

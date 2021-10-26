@@ -1,0 +1,53 @@
+package com.infy.springbootjpacrud.producerapp.model;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Entity
+public class Book {
+
+	@Id
+	@GeneratedValue()
+	private int bid;
+	private String bname;
+	
+	
+	@OneToMany(cascade=CascadeType.ALL,mappedBy="book")
+	private Review review;
+
+
+	public int getBid() {
+		return bid;
+	}
+
+
+	public void setBid(int bid) {
+		this.bid = bid;
+	}
+
+
+	public String getBname() {
+		return bname;
+	}
+
+
+	public void setBname(String bname) {
+		this.bname = bname;
+	}
+
+
+	public Review getReview() {
+		return review;
+	}
+
+
+	public void setReview(Review review) {
+		this.review = review;
+	}
+	
+	
+	
+}

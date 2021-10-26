@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 packages to &apos;Web_Services_UCP_Consumer_DB/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;WS_U_C_P___Consumer_DB&apos;&#x0D;&#x0A;- Destination element: &apos;Web_Services_UCP_Consumer_DB/src/main/java&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     WS_U_C_P___Consumer_DB/src/main/java/com.infy.main.controller&#x0D;&#x0A;     WS_U_C_P___Consumer_DB/src/main/java/com.infy.main.model" description="Copy packages" destination="=Web_Services_UCP_Consumer_DB/src\/main\/java" element1="/src\/main\/java&lt;com.infy.main.controller" element2="/src\/main\/java&lt;com.infy.main.model" flags="589830" fragments="2" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1629787430456" version="1.0"/>
+</session>

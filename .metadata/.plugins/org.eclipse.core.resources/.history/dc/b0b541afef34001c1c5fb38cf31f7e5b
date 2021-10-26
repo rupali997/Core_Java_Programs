@@ -1,0 +1,50 @@
+package com.cjc.app.evf.main.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class EmailModel {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int eid;
+	private String to;
+	private String subject;
+	private String message;
+	public String getTo() {
+		return to;
+	}
+	public void setTo(String to) {
+		this.to = to;
+	}
+	public String getSubject() {
+		return subject;
+	}
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+	public String getMessage() {
+		return message;
+	}
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	public EmailModel() {
+		
+	}
+	public EmailModel(String to, String subject, String message) {
+		super();
+		this.to = to;
+		this.subject = subject;
+		this.message = message;
+	}
+	@Override
+	public String toString() {
+		return "EmailModel [to=" + to + ", subject=" + subject + ", message=" + message + "]";
+	}
+	
+	
+	
+}

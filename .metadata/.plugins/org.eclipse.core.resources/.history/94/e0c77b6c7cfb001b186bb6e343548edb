@@ -1,0 +1,59 @@
+package com.infy.springbootspringmvccrud.app.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.infy.springbootspringmvccrud.app.model.User;
+import com.infy.springbootspringmvccrud.app.service_Interface.UserService;
+
+@Controller
+public class UserController {
+	
+	@Autowired
+	UserService us;
+
+	//Step-1--->
+	@RequestMapping("/")
+	public String prelogin() {
+		return "login";
+	}
+	
+	//Step-2--->
+	
+	@RequestMapping("/register")
+	public String preregister() {
+		return "registration";
+	}
+	
+	//Step-3--->
+	
+	@RequestMapping("/reg")
+	public String postregister(@ModelAttribute User u, Model m) {
+		
+		System.out.println("In save user!!");
+		if("Admin".equalsIgnoreCase(u.getRole().getRolename())) {
+			System.out.println(u.getRole().getRolename());
+			u.getRole().setRid(1);
+			us.saveUser(u);
+			return "login";
+			
+		}
+		else if("Trainer".equalsIgnoreCase(u.getRole().getRolename())) {
+			System.out.println(u.getRole().getRolename());
+			u.getRole().setRid(1);
+			us.saveUser(u);
+			return "login";
+			
+		}
+		else if("Student".equalsIgnoreCase(u.getRole().getRolename())) {
+			System.out.println(u.getRole().getRolename());
+			u.getRole().setRid(1);
+			us.saveUser(u);
+			return "login";
+			
+		}
+		return null;}
+}

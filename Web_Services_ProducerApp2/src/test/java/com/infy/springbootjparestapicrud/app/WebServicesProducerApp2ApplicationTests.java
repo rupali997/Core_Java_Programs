@@ -1,0 +1,13 @@
+package com.infy.springbootjparestapicrud.app;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class WebServicesProducerApp2ApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}

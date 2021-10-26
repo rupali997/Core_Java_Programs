@@ -1,0 +1,39 @@
+package com.cjc.app.evf.main.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Verification {
+	@Id
+	public int verId;
+	public String verDate;
+	public String status;
+	public String remark;
+
+	public int getVerId() {
+		return verId;
+	}
+	public void setVerId(int verId) {
+		this.verId = verId;
+	}
+	public String getVerDate() {
+		return verDate;
+	}
+	public void setVerDate(String verDate) {
+		this.verDate = verDate;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	public String getRemark() {
+		return remark;
+	}
+	public void setRemark(String remark) {
+		this.remark = remark;
+	}
+	
+}

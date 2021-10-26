@@ -1,0 +1,120 @@
+package com.cjc.app.evf.main.model;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Sanction {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int sid;
+	private String sanctionDate;
+	private String applicantName;
+	private long contactDetails;
+	private double loanAmtSanction;
+	
+	private double rateOfInterest;
+	private int loanTenure;
+	private double totalAmtPayble;
+	private double monthlyEMI;
+	private String modeOfPayment;
+
+	private String TermsAndConditions;
+	private String status;
+	
+
+	public double getTotalAmtPayble() {
+		return totalAmtPayble;
+	}
+	public void setTotalAmtPayble(double totalAmtPayble) {
+		this.totalAmtPayble = totalAmtPayble;
+	}
+	public int getSid() {
+		return sid;
+	}
+	public void setSid(int sid) {
+		this.sid = sid;
+	}
+	
+	
+
+	public String getSanctionDate() {
+		return sanctionDate;
+	}
+	public void setSanctionDate(String sanctionDate) {
+		this.sanctionDate = sanctionDate;
+	}
+	public String getApplicantName() {
+		return applicantName;
+	}
+	public void setApplicantName(String applicantName) {
+		this.applicantName = applicantName;
+	}
+	public long getContactDetails() {
+		return contactDetails;
+	}
+	public void setContactDetails(long contactDetails) {
+		this.contactDetails = contactDetails;
+	}
+	public double getLoanAmtSanction() {
+		return loanAmtSanction;
+	}
+	public void setLoanAmtSanction(double loanAmtSanction) {
+		this.loanAmtSanction = loanAmtSanction;
+	}
+
+	public double getRateOfInterest() {
+		return rateOfInterest;
+	}
+	public void setRateOfInterest(double rateOfInterest) {
+		this.rateOfInterest = rateOfInterest;
+	}
+	public int getLoanTenure() {
+		return loanTenure;
+	}
+	public void setLoanTenure(int loanTenure) {
+		this.loanTenure = loanTenure;
+	}
+	public double getMonthlyEMI() {
+		return monthlyEMI;
+	}
+	public void setMonthlyEMI(double monthlyEMI) {
+		this.monthlyEMI = monthlyEMI;
+	}
+	public String getModeOfPayment() {
+		return modeOfPayment;
+	}
+	public void setModeOfPayment(String modeOfPayment) {
+		this.modeOfPayment = modeOfPayment;
+	}
+	
+	public String getTermsAndConditions() {
+		return TermsAndConditions;
+	}
+	public void setTermsAndConditions(String termsAndConditions) {
+		TermsAndConditions = termsAndConditions;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	@Override
+	public String toString() {
+		return "Sanction [sid=" + sid + ", sanctionDate=" + sanctionDate + ", applicantName=" + applicantName
+				+ ", contactDetails=" + contactDetails + ", loanAmtSanction=" + loanAmtSanction + ", rateOfInterest="
+				+ rateOfInterest + ", loanTenure=" + loanTenure + ", totalAmtPayble=" + totalAmtPayble + ", monthlyEMI="
+				+ monthlyEMI + ", modeOfPayment=" + modeOfPayment + ", TermsAndConditions=" + TermsAndConditions
+				+ ", status=" + status + "]";
+	}
+	
+	
+	
+	
+	
+}

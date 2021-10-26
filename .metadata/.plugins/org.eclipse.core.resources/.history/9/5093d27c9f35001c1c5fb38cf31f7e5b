@@ -1,0 +1,84 @@
+package com.cjc.app.evf.main.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+@Entity
+public class Enquiry {
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int eId;
+	private String eName;
+	private long eMob;
+	private String ePan;
+	private String eAadhar;
+	private String eDob;
+	private long eAlternateNO;
+	
+	
+
+	public int geteId() {
+		return eId;
+	}
+
+	public void seteId(int eId) {
+		this.eId = eId;
+	}
+
+	public String geteName() {
+		return eName;
+	}
+
+	public void seteName(String eName) {
+		this.eName = eName;
+	}
+
+	public long geteMob() {
+		return eMob;
+	}
+
+	public void seteMob(long eMob) {
+		this.eMob = eMob;
+	}
+
+	public String getePan() {
+		return ePan;
+	}
+
+	public void setePan(String ePan) {
+		this.ePan = ePan;
+	}
+
+	public String geteAadhar() {
+		return eAadhar;
+	}
+
+	public void seteAadhar(String eAadhar) {
+		this.eAadhar = eAadhar;
+	}
+
+	public String geteDob() {
+		return eDob;
+	}
+
+	public void seteDob(String eDob) {
+		this.eDob = eDob;
+	}
+
+	public long geteAlternateNO() {
+		return eAlternateNO;
+	}
+
+	public void seteAlternateNO(long eAlternateNO) {
+		this.eAlternateNO = eAlternateNO;
+	}
+
+
+	
+	
+
+}

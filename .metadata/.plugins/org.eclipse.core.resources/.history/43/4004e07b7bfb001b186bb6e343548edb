@@ -1,0 +1,5 @@
+package com.infy.springbootspringmvccrud.app.service_Interface;
+
+public interface UserService {
+
+}

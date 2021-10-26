@@ -1,0 +1,21 @@
+package com.cjc.app.evf.main.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class PreviousLoanBankDetails {
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int pbid;
+	private String bName;
+	private Long bAccNo;
+	private String ifscCode;
+	private String micrCode;
+	private String bBranch;
+	
+	
+}

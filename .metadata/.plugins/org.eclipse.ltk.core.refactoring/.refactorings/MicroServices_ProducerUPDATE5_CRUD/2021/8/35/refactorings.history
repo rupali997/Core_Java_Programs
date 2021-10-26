@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 packages to &apos;MicroServices_ProducerDELETE5_CRUD/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;MicroServices_ProducerUPDATE5_CRUD&apos;&#x0D;&#x0A;- Destination element: &apos;MicroServices_ProducerDELETE5_CRUD/src/main/java&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     MicroServices_ProducerUPDATE5_CRUD/src/main/java/com.example.model&#x0D;&#x0A;     MicroServices_ProducerUPDATE5_CRUD/src/main/java/com.example.repository" description="Copy packages" destination="=MicroServices_ProducerDELETE5_CRUD/src\/main\/java" element1="/src\/main\/java&lt;com.example.model" element2="/src\/main\/java&lt;com.example.repository" flags="589830" fragments="2" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1630082484528" version="1.0"/>
+</session>

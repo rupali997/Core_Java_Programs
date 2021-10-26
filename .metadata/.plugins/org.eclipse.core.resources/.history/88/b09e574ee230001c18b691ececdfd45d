@@ -1,0 +1,61 @@
+package com.cjc.app.evf.main.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class AccountDetails {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int accId;
+	private long accNumber;
+	private String accType;
+	private double accBal;
+	private String accHolderName;
+	private String accStatus;
+	public int getAccId() {
+		return accId;
+	}
+	public void setAccId(int accId) {
+		this.accId = accId;
+	}
+	public long getAccNumber() {
+		return accNumber;
+	}
+	public void setAccNumber(long accNumber) {
+		this.accNumber = accNumber;
+	}
+	public String getAccType() {
+		return accType;
+	}
+	public void setAccType(String accType) {
+		this.accType = accType;
+	}
+	public double getAccBal() {
+		return accBal;
+	}
+	public void setAccBal(double accBal) {
+		this.accBal = accBal;
+	}
+	public String getAccHolderName() {
+		return accHolderName;
+	}
+	public void setAccHolderName(String accHolderName) {
+		this.accHolderName = accHolderName;
+	}
+	public String getAccStatus() {
+		return accStatus;
+	}
+	public void setAccStatus(String accStatus) {
+		this.accStatus = accStatus;
+	}
+	@Override
+	public String toString() {
+		return "AccountDetails [accId=" + accId + ", accNumber=" + accNumber + ", accType=" + accType + ", accBal="
+				+ accBal + ", accHolderName=" + accHolderName + ", accStatus=" + accStatus + "]";
+	}
+	
+}

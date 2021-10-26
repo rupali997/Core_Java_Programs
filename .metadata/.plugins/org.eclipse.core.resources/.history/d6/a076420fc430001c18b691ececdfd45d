@@ -1,0 +1,42 @@
+package com.cjc.app.evf.main.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+import com.cjc.app.evf.main.model.LoanDetails;
+import com.cjc.app.evf.main.service.LoanDetailsServiceI;
+
+@RestController
+public class LoanDetailsController {
+	
+	@Autowired
+	LoanDetailsServiceI lods;
+
+	@PostMapping("/regLoanDetails")
+	public String addData(@RequestBody LoanDetails l)
+	{
+		lods.addData(l);
+		return "LoanDetails data Add Successfully !";
+		
+	}
+	
+	@GetMapping("/getLoanDetails/{lId}")
+	public LoanDetails m2(@PathVariable int lId) {
+		return lods.getdataId(lId);
+
+	}
+	
+	 @DeleteMapping("/deleteLoanDetails/{lId}")
+	 public String deleteData(@PathVariable int lId) 
+	 { 
+		 lods.deleteData(lId); return "Successfully";
+	 
+
+	 }
+
+}

@@ -1,0 +1,114 @@
+package com.infy.springbootspringmvccrud.app.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.infy.springbootspringmvccrud.app.model.User;
+import com.infy.springbootspringmvccrud.app.service_Interface.UserService;
+
+@Controller
+public class UserController {
+
+	@Autowired
+	UserService us;
+
+	// Step-1--->
+	@RequestMapping("/")
+	public String preLogin() {
+		return "login";
+	}
+
+	// Step-2--->
+
+	@RequestMapping("/register")
+	public String preregister() {
+		return "registration";
+	}
+
+	// Step-3--->
+
+	@RequestMapping("/reg")
+	public String postregister(@ModelAttribute User u, Model m) {
+
+		System.out.println(u.getRole().getRolename());
+
+		if ("Admin".equalsIgnoreCase(u.getRole().getRolename())) {
+			System.out.println("Rupali Borkar : " + u.getRole().getRolename());
+			u.getRole().setRid(1);
+			us.saveUser(u);
+			return "login";
+		} else if ("Trainer".equalsIgnoreCase(u.getRole().getRolename())) {
+			System.out.println("Daksha Borkar : " + u.getRole().getRolename());
+
+			u.getRole().setRid(2);
+			us.saveUser(u);
+			return "login";
+		} else if ("Student".equalsIgnoreCase(u.getRole().getRolename())) {
+			System.out.println("Kalash Borkar : " + u.getRole().getRolename());
+
+			u.getRole().setRid(3);
+			us.saveUser(u);
+			return "login";
+		}
+
+		return "login";
+	}
+	
+	// Step-4--->
+	
+	@RequestMapping("/log")
+	public String postLogin(@ModelAttribute User u,Model m){
+		
+		System.out.println("In Post Login!!");
+		
+		User newuser = us.loginCheck(u);
+		
+		if(newuser==null) {
+			System.out.println("****No Data Found****");
+			return "login";
+		}
+		else {
+			System.out.println(u.getLogin().getUsername());
+			System.out.println(u.getLogin().getPassword());
+			System.out.println(newuser.getName());
+			System.out.println(newuser.getMobile());
+			System.out.println(newuser.getRole().getRid());
+			System.out.println(newuser.getRole().getRolename());
+			
+			if(newuser.getRole().getRid()==1){
+				List<User> lis = us.getAllUsers(2);
+				m.addAttribute("ulist", lis);
+				return "success";
+			}
+			else if(newuser.getRole().getRid()==2){
+				List<User> lis = us.getAllUsers(3);
+				m.addAttribute("ulist", lis);
+				return "success";
+			}
+			else if(newuser.getRole().getRid()==3){
+				System.out.println("Name : "+u.getName());
+				System.out.println("Mobile : "+u.getMobile());
+				System.out.println("Username : "+u.getLogin().getUsername());
+				System.out.println("Password : "+u.getLogin().getPassword());
+				System.out.println("RoleID : "+u.getRole().getRid());
+				System.out.println("RoleName : "+u.getRole().getRolename());
+				
+				
+				
+				List<User> lis = us.getAllUsers(3);
+				lis.add(u);
+				m.addAttribute("ulist", lis);
+				return "success";
+			}
+
+
+		}
+		return "success";
+		
+	}
+}

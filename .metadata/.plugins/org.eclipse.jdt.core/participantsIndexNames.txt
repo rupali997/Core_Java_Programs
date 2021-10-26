@@ -1,0 +1,3 @@
+INDEX VERSION 1.130
+C:\Users\Daksha\Desktop\SpringBootSTS\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3758820133.index
+\WS_U_C_P___Consumer_DB\src\main\java

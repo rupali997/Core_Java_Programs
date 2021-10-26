@@ -1,0 +1,40 @@
+package com.cjc.app.evf.main.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+import com.cjc.app.evf.main.model.Verification;
+import com.cjc.app.evf.main.service.VerificationServiceI;
+
+@RestController
+public class VerificationController {
+	@Autowired
+	VerificationServiceI vsi;
+	
+	@PostMapping("/regVerification")
+	public String addData(@RequestBody Verification l)
+	{
+		vsi.addData(l);
+		return "Verification data Add Successfully !";
+		
+	}
+	
+	@GetMapping("/getdata/{verId}")
+	public Verification m2(@PathVariable int verId) {
+		return vsi.getdataId(verId);
+
+	}
+	@DeleteMapping("/deleteVerification/{verId}")
+	public String deleteVData(@PathVariable int verId)
+	{
+		vsi.deleteData(verId);
+				return "Successfully";
+		
+	}
+
+
+}

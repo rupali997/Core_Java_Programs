@@ -1,0 +1,9 @@
+package com.infy.springbootspringmvccrud.app.service_Interface;
+
+import com.infy.springbootspringmvccrud.app.model.User;
+
+public interface UserService {
+
+	void saveUser(User u);
+
+}

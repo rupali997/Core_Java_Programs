@@ -1,0 +1,5 @@
+package com.cjc.app.evf.model;
+
+public class Customer_Registration {
+
+}

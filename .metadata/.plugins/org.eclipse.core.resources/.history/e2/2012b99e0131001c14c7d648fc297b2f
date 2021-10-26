@@ -1,0 +1,22 @@
+package com.cjc.app.evf.main.serviceimpl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cjc.app.evf.main.model.Documents;
+import com.cjc.app.evf.main.repository.EvfRepository;
+import com.cjc.app.evf.main.service.EvfServiceI;
+
+@Service
+public class EvfServiceImpl implements EvfServiceI{
+	@Autowired
+	EvfRepository er;
+
+	@Override
+	public void saveDoucments(Documents value) {
+		
+		er.save(value);
+		
+	}
+
+}

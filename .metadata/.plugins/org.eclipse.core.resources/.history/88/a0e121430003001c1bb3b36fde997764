@@ -1,0 +1,5 @@
+package com.infy.springbootjparestapicrud.app.repository;
+
+public interface BookDaoRepository {
+
+}

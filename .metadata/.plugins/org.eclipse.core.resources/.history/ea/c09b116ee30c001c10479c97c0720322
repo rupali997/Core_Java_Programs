@@ -1,0 +1,13 @@
+package com.example;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class MicroServicesEurekaSererCrud9OperationApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(MicroServicesEurekaSererCrud9OperationApplication.class, args);
+	}
+
+}

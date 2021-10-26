@@ -1,0 +1,13 @@
+package com.cjc.app.evf.main.service;
+
+import com.cjc.app.evf.main.model.LoanDetails;
+
+public interface LoanDetailsServiceI {
+
+	void addData(LoanDetails l);
+
+	void deleteData(int lId);
+
+	LoanDetails getdataId(int lId);
+
+}

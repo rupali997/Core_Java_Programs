@@ -1,0 +1,33 @@
+package com.cjc.app.evf.main.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cjc.app.evf.main.model.Verification;
+import com.cjc.app.evf.main.repository.VerificationRepository;
+
+@Service
+public class VerificationServiceImpl implements VerificationServiceI {
+	@Autowired
+	VerificationRepository vr;
+
+	@Override
+	public void addData(Verification l) {
+		vr.save(l);
+		
+	}
+
+	@Override
+	public Verification getdataId(int verId) {
+		
+		return vr.getByVerId(verId);
+	}
+
+	@Override
+	public void deleteData(int verId) {
+		vr.deleteById(verId);
+		
+	}
+	
+
+}

@@ -1,0 +1,7 @@
+#Tomcat publish data
+#Mon Aug 09 22:38:54 IST 2021
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\Daksha\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-el\\9.0.50\\tomcat-embed-el-9.0.50.jar=C\:\\Users\\Daksha\\Desktop\\SOFTWARE_ APPLICATIONS\\Spring MVC\\NewEclipse\\pivotal-tc-server-developer-3.2.8.RELEASE\\base-instance\\wtpwebapps\\SpringBoot_SpringMVC_Demo-1\\WEB-INF\\lib\\tomcat-embed-el-9.0.50.jar
+org.eclipse.jst.jee.server\:sp=C\:\\Users\\Daksha\\Desktop\\SOFTWARE_ APPLICATIONS\\Spring MVC\\NewEclipse\\pivotal-tc-server-developer-3.2.8.RELEASE\\base-instance\\wtpwebapps\\sp
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\Daksha\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-jasper\\9.0.50\\tomcat-embed-jasper-9.0.50.jar=C\:\\Users\\Daksha\\Desktop\\SOFTWARE_ APPLICATIONS\\Spring MVC\\NewEclipse\\pivotal-tc-server-developer-3.2.8.RELEASE\\base-instance\\wtpwebapps\\SpringBoot_SpringMVC_Demo-1\\WEB-INF\\lib\\tomcat-embed-jasper-9.0.50.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\Daksha\\.m2\\repository\\org\\springframework\\spring-web\\5.3.9\\spring-web-5.3.9.jar=C\:\\Users\\Daksha\\Desktop\\SOFTWARE_ APPLICATIONS\\Spring MVC\\NewEclipse\\pivotal-tc-server-developer-3.2.8.RELEASE\\base-instance\\wtpwebapps\\SpringBoot_SpringMVC_Demo-1\\WEB-INF\\lib\\spring-web-5.3.9.jar
+org.eclipse.jst.jee.server\:SpringBoot_SpringMVC_Demo-1=C\:\\Users\\Daksha\\Desktop\\SOFTWARE_ APPLICATIONS\\Spring MVC\\NewEclipse\\pivotal-tc-server-developer-3.2.8.RELEASE\\base-instance\\wtpwebapps\\SpringBoot_SpringMVC_Demo-1

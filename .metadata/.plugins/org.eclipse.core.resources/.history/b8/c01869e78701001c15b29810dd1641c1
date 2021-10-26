@@ -1,0 +1,10 @@
+package com.springbootjparestapicrud.app.service_Implementation;
+
+import org.springframework.stereotype.Service;
+
+import com.springbootjparestapicrud.app.service_Interface.UserService;
+
+@Service
+public class UserServiceImpl implements UserService {
+
+}

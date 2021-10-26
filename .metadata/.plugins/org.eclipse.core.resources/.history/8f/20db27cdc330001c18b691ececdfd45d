@@ -1,0 +1,36 @@
+package com.cjc.app.evf.main.service_Implementation;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cjc.app.evf.main.model.EMIDetails;
+import com.cjc.app.evf.main.repository.EMIDetailsRepository;
+
+@Service
+public class EMIDetailsServiceImpl implements EMIDetailsServiceI {
+	
+	@Autowired 
+	EMIDetailsRepository emir;
+
+	@Override
+	public void addData(EMIDetails e) 
+	{
+		emir.save(e);
+		
+	}
+	@Override
+	public EMIDetails getdataId(int emiId) 
+	{
+		
+		return emir.getByEmiId(emiId);
+		}
+
+
+	@Override
+	public void deleteData(int emiId)
+	{
+		emir.deleteById(emiId);
+		
+	}
+
+}

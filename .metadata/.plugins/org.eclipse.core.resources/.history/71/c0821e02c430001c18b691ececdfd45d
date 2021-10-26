@@ -1,0 +1,102 @@
+package com.cjc.app.evf.main.model;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+@Entity
+public class LoanDetails {
+	
+	@Id
+	public int lId;
+	public int lNo;
+	public Double lAmt;
+	public Double rateOfInterest;
+	public Double tenure;
+	public Double totalAmtToBePaid;
+	public Double processingFee;
+	public Double interest;	
+	public String sanctionDate;
+	public String  status;
+	public String remark;
+	@OneToOne(cascade = CascadeType.ALL)
+	public EMIDetails eMIDetails;
+	
+	public int getlId() {
+		return lId;
+	}
+	public void setlId(int lId) {
+		this.lId = lId;
+	}
+	public int getlNo() {
+		return lNo;
+	}
+	public void setlNo(int lNo) {
+		this.lNo = lNo;
+	}
+	public Double getlAmt() {
+		return lAmt;
+	}
+	public void setlAmt(Double lAmt) {
+		this.lAmt = lAmt;
+	}
+	public Double getRateOfInterest() {
+		return rateOfInterest;
+	}
+	public void setRateOfInterest(Double rateOfInterest) {
+		this.rateOfInterest = rateOfInterest;
+	}
+	public Double getTenure() {
+		return tenure;
+	}
+	public void setTenure(Double tenure) {
+		this.tenure = tenure;
+	}
+	public Double getTotalAmtToBePaid() {
+		return totalAmtToBePaid;
+	}
+	public void setTotalAmtToBePaid(Double totalAmtToBePaid) {
+		this.totalAmtToBePaid = totalAmtToBePaid;
+	}
+	public Double getProcessingFee() {
+		return processingFee;
+	}
+	public void setProcessingFee(Double processingFee) {
+		this.processingFee = processingFee;
+	}
+	public Double getInterest() {
+		return interest;
+	}
+	public void setInterest(Double interest) {
+		this.interest = interest;
+	}
+	public String getSanctionDate() {
+		return sanctionDate;
+	}
+	public void setSanctionDate(String sanctionDate) {
+		this.sanctionDate = sanctionDate;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	public String getRemark() {
+		return remark;
+	}
+	public void setRemark(String remark) {
+		this.remark = remark;
+	}
+	public EMIDetails geteMIDetails() {
+		return eMIDetails;
+	}
+	public void seteMIDetails(EMIDetails eMIDetails) {
+		this.eMIDetails = eMIDetails;
+	}
+	
+	
+
+
+}

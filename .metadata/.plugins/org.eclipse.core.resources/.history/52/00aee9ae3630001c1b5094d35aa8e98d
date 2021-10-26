@@ -1,0 +1,29 @@
+package com.cjc.app.evf.main.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class VehicleDetails {
+	
+	@Id
+	private int vid;
+	private String vtype;
+	public int getVid() {
+		return vid;
+	}
+	public void setVid(int vid) {
+		this.vid = vid;
+	}
+	public String getVtype() {
+		return vtype;
+	}
+	public void setVtype(String vtype) {
+		this.vtype = vtype;
+	}
+	
+	
+
+}

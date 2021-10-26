@@ -1,0 +1,22 @@
+package com.example.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.helperclass.FileUploadHelperClass;
+
+@RestController
+public class FileUploadController {
+	
+	@Autowired
+	FileUploadHelperClass fileUploadHelper;
+	
+	
+	@PostMapping("/upload_image")
+	public ResponseEntity<String> uploadFile(){
+		return ResponseEntity.ok("Working");
+	}
+
+}

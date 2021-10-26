@@ -1,0 +1,13 @@
+package com.cjc.app.evf.main.service_Interface;
+
+import com.cjc.app.evf.main.model.Verification;
+
+public interface VerificationServiceI {
+
+	void addData(Verification l);
+
+	Verification getdataId(int verId);
+
+	void deleteData(int verId);
+
+}

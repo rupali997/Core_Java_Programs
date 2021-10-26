@@ -1,0 +1,29 @@
+package com.infy.springbootspringmvccrud.app.dao_Implementation;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.infy.springbootspringmvccrud.app.dao_Interface.UserDao;
+import com.infy.springbootspringmvccrud.app.model.User;
+
+@Repository
+public class UserDaoImpl implements UserDao{
+	
+	@Autowired
+	SessionFactory sf;
+
+	@Override
+	public void saveUser(User u) {
+		
+		Session session = sf.openSession();
+		Transaction tx = session.beginTransaction();
+		session.save(u);
+		tx.commit();
+		session.close();
+		
+	}
+
+}

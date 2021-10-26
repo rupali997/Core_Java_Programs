@@ -1,0 +1,91 @@
+package com.cjc.app.evf.main.model;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+@Entity
+public class Previous_Loan {
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int pLoanId;
+	private double pLoanAmt;
+	private int pLoanTenure;
+	private double paidAmt;
+	private double remainingAmt;
+	private int defaulterCount;
+
+	@OneToOne(cascade=CascadeType.ALL)
+	private PreviousLoanBankDetails pbankDetail;
+
+	public int getpLoanId() {
+		return pLoanId;
+	}
+
+	public void setpLoanId(int pLoanId) {
+		this.pLoanId = pLoanId;
+	}
+
+	public double getpLoanAmt() {
+		return pLoanAmt;
+	}
+
+	public void setpLoanAmt(double pLoanAmt) {
+		this.pLoanAmt = pLoanAmt;
+	}
+
+	public int getpLoanTenure() {
+		return pLoanTenure;
+	}
+
+	public void setpLoanTenure(int pLoanTenure) {
+		this.pLoanTenure = pLoanTenure;
+	}
+
+	public double getPaidAmt() {
+		return paidAmt;
+	}
+
+	public void setPaidAmt(double paidAmt) {
+		this.paidAmt = paidAmt;
+	}
+
+	public double getRemainingAmt() {
+		return remainingAmt;
+	}
+
+	public void setRemainingAmt(double remainingAmt) {
+		this.remainingAmt = remainingAmt;
+	}
+
+	public int getDefaulterCount() {
+		return defaulterCount;
+	}
+
+	public void setDefaulterCount(int defaulterCount) {
+		this.defaulterCount = defaulterCount;
+	}
+
+	@JsonManagedReference
+	public PreviousLoanBankDetails getPbankDetail() {
+		return pbankDetail;
+	}
+
+	public void setPbankDetail(PreviousLoanBankDetails pbankDetail) {
+		this.pbankDetail = pbankDetail;
+	}
+	
+	
+	
+	
+	
+	
+
+}

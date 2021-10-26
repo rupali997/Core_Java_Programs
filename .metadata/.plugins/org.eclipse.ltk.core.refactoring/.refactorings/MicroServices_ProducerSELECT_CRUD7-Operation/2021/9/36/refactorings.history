@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.infy.Exception&apos; to &apos;MicroServices_Consumer_CRUD7-Operatiion/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;MicroServices_ProducerSELECT_CRUD7-Operation&apos;&#x0D;&#x0A;- Destination element: &apos;MicroServices_Consumer_CRUD7-Operatiion/src/main/java&apos;&#x0D;&#x0A;- Original element: &apos;MicroServices_ProducerSELECT_CRUD7-Operation/src/main/java/com.infy.Exception&apos;" description="Copy package" destination="=MicroServices_Consumer_CRUD7-Operatiion/src\/main\/java" element1="/src\/main\/java&lt;com.infy.Exception" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1630484089606" version="1.0"/>
+</session>

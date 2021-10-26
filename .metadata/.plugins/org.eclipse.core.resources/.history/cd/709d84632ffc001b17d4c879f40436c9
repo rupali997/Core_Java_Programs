@@ -1,0 +1,107 @@
+package com.infy.springbootspringmvcjpacrud.app.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.infy.springbootspringmvcjpacrud.app.model.Student;
+import com.infy.springbootspringmvcjpacrud.app.service_Interface.StudentService;
+
+@Controller
+public class StudentController {
+
+	@Autowired
+	StudentService ss;
+
+	@RequestMapping("/")
+	public String preLogin() {
+		return "login";
+	}
+
+	@RequestMapping("/register")
+	public String preRegister() {
+		return "registration";
+	}
+
+	@RequestMapping("/reg")
+	public String saveUser(@ModelAttribute Student s) {
+
+		ss.saveUser(s);
+
+		return "login";
+
+	}
+
+	@RequestMapping("/log")
+	public String afterLogin(@RequestParam("username") String un, @RequestParam("password") String ps, Model m) {
+		System.out.println("In Login check****");
+		Student s = ss.loginCheck(un, ps);
+		if (s != null) {
+
+			Iterable<Student> lis = ss.getAllData();
+			m.addAttribute("slist", lis);
+			return "success";
+		} else {
+			return "login";
+		}
+
+	}
+
+	@RequestMapping("/delete")
+	public String deleteStudent(@RequestParam int sid, Model m) {
+		System.out.println("In delete user!!");
+		Student s = ss.deleteStudent(sid);
+		
+		if(s!=null) {
+		Iterable<Student> lis = ss.getAllData();
+		m.addAttribute("slist", lis);
+
+		return "success";
+		
+			}
+		else {
+			return "login";
+		}
+		
+}
+	
+	
+	@RequestMapping("/edit")
+	public String editStudent(@RequestParam int sid,Model m) {
+		
+		System.out.println("In Edit User!!");
+		ss.editStudent(sid);
+		return null;
+		
+//		Student s1 = ss.editStudent(sid);
+//		if(s1!=null) {
+//			Iterable<Student> lis = ss.getAllData();
+//			m.addAttribute("stu", s1);
+//
+//			return "update";
+//			
+//		}
+//		else {
+//			Iterable<Student> lis = ss.getAllData();
+//			m.addAttribute("slist", lis);
+//
+//			return "success";
+//		}
+//		
+		
+		
+	}
+	
+	
+	@RequestMapping("/update")
+	public String updateStudent(@ModelAttribute Student s, Model m) {
+		ss.updateStudent(s);
+		Iterable<Student> lis = ss.getAllData();
+		m.addAttribute("slist", lis);
+		return "success";
+		
+	}
+}
